@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/elegirComidasFragment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Elegir Comidas" />
+
+        <item
+            android:id="@+id/calcularInsumosFragment"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Calcular Insumos" />
+
+        <item
+            android:id="@+id/confirmarCompraFragment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Confirmar Compra" />
+
+        <item
+            android:id="@+id/cuentaCorrienteFragment"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Cuenta Corriente" />
+        <item
+            android:id="@+id/salirFragment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Salir" />
+    </group>
+</menu>

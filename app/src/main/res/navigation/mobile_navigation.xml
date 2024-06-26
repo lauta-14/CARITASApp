@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.caritas.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_elegirComidasFragment"
+            app:destination="@id/elegirComidasFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_calcularInsumosFragment"
+            app:destination="@id/calcularInsumosFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_confirmarCompraFragment"
+            app:destination="@id/confirmarCompraFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_cuentaCorrienteFragment"
+            app:destination="@id/cuentaCorrienteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/elegirComidasFragment"
+        android:name="com.example.caritas.ui.comidas.ElegirComidasFragment"
+        android:label="Elegir Comidas"
+        tools:layout="@layout/fragment_elegir_comidas" >
+        <action
+            android:id="@+id/action_elegirComidasFragment_to_calcularInsumosFragment"
+            app:destination="@id/calcularInsumosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.caritas.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.caritas.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.caritas.ui.registro.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.caritas.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_global_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calcularInsumosFragment"
+        android:name="com.example.caritas.ui.insumos.CalcularInsumosFragment"
+        android:label="Calcular Insumos"
+        tools:layout="@layout/fragment_calcular_insumos" >
+        <action
+            android:id="@+id/action_calcularInsumosFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_calcularInsumosFragment_to_confirmarCompraFragment"
+            app:destination="@id/confirmarCompraFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmarCompraFragment"
+        android:name="com.example.caritas.ui.confirmar.ConfirmarCompraFragment"
+        android:label="Confirmar Compra"
+        tools:layout="@layout/fragment_confirmar_compra" >
+        <action
+            android:id="@+id/action_confirmarCompraFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_confirmarCompraFragment_to_cuentaCorrienteFragment"
+            app:destination="@id/cuentaCorrienteFragment" />
+        <action
+            android:id="@+id/action_confirmarCompraFragment_to_elegirComidasFragment"
+            app:destination="@id/elegirComidasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cuentaCorrienteFragment"
+        android:name="com.example.caritas.ui.cuenta.CuentaCorrienteFragment"
+        android:label="Cuenta Corriente"
+        tools:layout="@layout/fragment_cuenta_corriente" >
+        <action
+            android:id="@+id/action_cuentaCorrienteFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/salirFragment"
+        android:name="com.example.caritas.ui.salir.SalirFragment"
+        android:label="Salir"/>
+</navigation>
